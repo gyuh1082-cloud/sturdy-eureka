@@ -1,0 +1,159 @@
+/* ========================= */
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f5f5f5;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap; /* allow stacking on small screens */
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.nav a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE HEADER */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav {
+    margin-top: 8px;
+    text-align: center;
+  }
+  .nav a {
+    display: block;
+    margin: 6px 0;
+  }
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1000px; /* container max width */
+  margin: 0 auto;     /* center horizontally */
+  padding: 0 16px;    /* horizontal padding */
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* allow vertical stacking on mobile */
+  margin-bottom: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-card {
+  width: 240px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  text-align: center;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* HERO STACK MOBILE */
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-card {
+    margin-top: 16px;
+  }
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid black;
+  text-decoration: none;
+  border-radius: 4px;
+  background: #0077ff;
+  color: white;
+  margin-top: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #005fcc;
+  transform: translateY(-2px);
+}
+
+/* GRID SECTION */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* desktop 4 columns */
+  gap: 12px;
+  padding: 20px 0;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 18px;
+  background: white;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* GRID BREAKPOINTS */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* tablet 2 columns */
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr; /* mobile 1 column */
+  }
+}
+
+/* FOOTER */
+.footer {
+  padding: 16px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  background: #f5f5f5;
+}
